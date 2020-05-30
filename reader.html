@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/reader.js"></script>
+
+<head>
+  <title> Bookchain Platform </title>
+</head>
+
+<body onload="getReader()">
+
+<!-- main contents -->
+  <div class="w3-container w3-margin">
+    <header class="w3-container w3-black">
+      <h2>Bookcase</h2>
+      <p><sapn id="name">&apos;s Books</span></p>
+    </header>
+    <div class="w3-container w3-right">
+      <button class="w3-button " id="btTable" type="button" onclick="getReader(true)"><b>&#9776;</b></button>
+      <button class="w3-button " id="btCard" type="button" onclick="getReader(false)" disabled><b>&#9946;</b></button>
+    </div>
+
+    <div id="contents" class="w3-container w3-padding">
+    </div>
+
+    <footer class="w3-container w3-light-grey">
+      <h6>Copyright 2020 by Sangmin. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+<!-- popup modal -->
+  <div id="dialog" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-orange">
+        <span class="w3-button w3-display-topright w3-red" onclick="hideDialog()"><b>&times;</b></span>
+        <h4><span id="title"></span></h4>
+      </header>
+      <div class="w3-container w3-padding-24">
+        <h5><span id="message"></span></h5>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

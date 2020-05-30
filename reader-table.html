@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/reader.js"></script>
+
+<head>
+  <title> Bookchain Platform </title>
+</head>
+
+<body>
+
+<!-- main contents -->
+  <div class="w3-container w3-margin">
+    <header class="w3-container w3-black">
+      <h2>Bookcase</h2>
+      <p><sapn id="name"></span>&apos;s Books</p>
+    </header>
+
+    <div id="contents" class="w3-container w3-padding">
+      <table class="w3-table w3-bordered w3-striped w3-border test w3-hoverable">
+        <tr class="w3-green">
+          <th>&nbsp;</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Publisher</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="w3-card" style="width:40%;min-width:40px;max-width:80px">
+              <img src="mockup/978-1-78289-808-4.jpg" alt="book" style="width:100%">
+            </div>
+          </td>
+          <td>안나 까레리나(상)</td>
+          <td>레오 톨스토이</td>
+          <td>열린책들</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="w3-card" style="width:40%;min-width:40px;max-width:80px">
+              <img src="mockup/978-1-78289-808-5.jpg" alt="book" style="width:100%">
+            </div>
+          </td>
+          <td>안나 까레리나(하)</td>
+          <td>레오 톨스토이</td>
+          <td>열린책들</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="w3-card" style="width:40%;min-width:40px;max-width:80px">
+              <img src="mockup/978-1-78289-808-6.jpg" alt="book" style="width:100%">
+            </div>
+          </td>
+          <td>사람은 무엇으로 사는가</td>
+          <td>레오 톨스토이</td>
+          <td>열린책들</td>
+        </tr>
+      </table>
+    </div>
+
+    <footer class="w3-container w3-light-grey">
+      <h6>Copyright 2020 by Sangmin. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+<!-- popup modal -->
+  <div id="dialog" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-orange">
+        <span class="w3-button w3-display-topright w3-red" onclick="hideDialog()"><b>&times;</b></span>
+        <h4><span id="title"></span></h4>
+      </header>
+      <div class="w3-container w3-padding-24">
+        <h5><span id="message"></span></h5>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
