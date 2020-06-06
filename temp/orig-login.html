@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/diary.css">
+<script type=text/javascript src="js/login.js"></script>
+
+<head>
+  <title> Trip Diary </title>
+</head>
+
+<body onload="getRemember()">
+
+<!-- main contents -->
+  <div class="td-container td-margin">
+    <header class="td-container td-dark-grey">
+      <h2>Log In</h2>
+      <p>Welcome to Trip Diary</p>
+    </header>
+    <div class="td-container">
+      <label class="td-label"><b>Email</b></label>
+      <input class="td-input" type="text" placeholder="Enter Email" id="email" required" >
+      <label class="td-label"><b>Password</b></label>
+      <input class="td-input" type="password" placeholder="Enter Password" id="password" >
+      <label class="td-label" >
+        <input class="td-check td-padding-16" type="checkbox" id="remember" onclick="setRemember(this)"> Remember me
+      </label>
+      <div class="td-container td-padding-16">
+        <button class="td-button " type="button" onclick="history.back()">Cancel</button>
+        <button class="td-button " type="submit" onclick="login()">Submit</button>
+      </div>
+    </div>
+    <div class="td-container">
+        <p>Not yet a member? please <a href="signup.html" style="color:dodgerblue">sign up</a>!</p>
+    </div>
+    <footer class="td-container td-light-grey">
+      <h6>Copyright 2020 by Sangmin. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+<!-- popup modal -->
+  <div id="dialog" class="td-modal">
+    <div class="td-modal-content td-animate-zoom">
+      <header class="td-container td-orange">
+        <span class="td-button td-display-topright td-red" onclick="hideDialog()"><b>&times;</b></span>
+        <h4><span id="title"></span></h4>
+      </header>
+      <div class="td-container td-padding-24">
+        <h5><span id="message"></span></h5>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

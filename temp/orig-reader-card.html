@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/diary.css">
+<script type=text/javascript src="js/reader.js"></script>
+
+<head>
+  <title> Bookchain Platform </title>
+</head>
+
+<body>
+
+<!-- main contents -->
+  <div class="td-container td-margin">
+    <header class="td-container td-black">
+      <h2>Bookcase</h2>
+      <p><sapn id="name"></span>&apos;s Books</p>
+    </header>
+
+    <div id="contents" class="td-container td-padding">
+
+      <div class="td-cell-row td-margin">
+        <div class="td-container td-cell">
+          <div class="td-card" style="width:100%;min-width:200px;max-width:300px">
+            <img src="img/978-1-78289-808-4.jpg" alt="book" style="width:100%;opacity:0.80">
+            <div class="td-container">
+              <h5><b>안나 까레리나(상)</b></h5>
+              <p>레오 톨스토이</p>
+            </div>
+          </div>
+        </div>
+        <div class="td-container td-cell">
+          <div class="td-card" style="width:100%;min-width:200px;max-width:300px">
+            <img src="img/978-1-78289-808-5.jpg" alt="book" style="width:100%;opacity:0.80">
+            <div class="td-container">
+              <h5><b>안나 까레리나(하)</b></h5>
+              <p>레오 톨스토이</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="td-container td-light-grey">
+      <h6>Copyright 2020 by Sangmin. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+<!-- popup modal -->
+  <div id="dialog" class="td-modal">
+    <div class="td-modal-content">
+      <header class="td-container td-orange">
+        <span class="td-button td-display-topright td-red" onclick="hideDialog()"><b>&times;</b></span>
+        <h4><span id="title"></span></h4>
+      </header>
+      <div class="td-container td-padding-24">
+        <h5><span id="message"></span></h5>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

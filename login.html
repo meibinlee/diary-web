@@ -4,52 +4,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <script type=text/javascript src="js/login.js"></script>
-<script type=text/javascript src="js/database.js"></script>
 
 <head>
-  <title> Bookchain Platform </title>
+  <title> Trip Diary </title>
 </head>
 
-<body onload="getRemember()">
+<body>
 
 <!-- main contents -->
   <div class="w3-container w3-margin">
-    <header class="w3-container w3-black">
+    <header class="w3-container w3-dark-grey">
       <h2>Log In</h2>
-      <p>Welcome to Bookchain Platform</p>
+      <p>Welcome to Trip Diary</p>
     </header>
     <div class="w3-container">
-      <label class="w3-label"><b>Email</b></label>
-      <input class="w3-input" type="text" placeholder="Enter Email" id="email" required" >
+      <label class="w3-label"><b>ID</b></label>
+      <input class="w3-input" type="text" placeholder="Enter ID" id="id" required" >
       <label class="w3-label"><b>Password</b></label>
       <input class="w3-input" type="password" placeholder="Enter Password" id="password" >
       <label class="w3-label" >
         <input class="w3-check w3-padding-16" type="checkbox" id="remember" onclick="setRemember(this)"> Remember me
       </label>
       <div class="w3-container w3-padding-16">
-        <button class="w3-button " type="button" onclick="history.back()">Cancel</button>
-        <button class="w3-button " type="submit" onclick="login()">Submit</button>
+        <button class="w3-button " type="submit">Login</button>
       </div>
     </div>
     <div class="w3-container">
-        <p>Not yet a member? please <a href="signup.html" style="color:dodgerblue">sign up</a>!</p>
+        <p>Not a member yet? please <a href="signup.html" style="color:dodgerblue">sign up</a>!</p>
     </div>
     <footer class="w3-container w3-light-grey">
-      <h6>Copyright 2020 by Sangmin. All Rights Reserved.</h6>
+      <h6>Copyright 2020 by Binisoli. All Rights Reserved.</h6>
     </footer>
-  </div>
-
-<!-- popup modal -->
-  <div id="dialog" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom">
-      <header class="w3-container w3-orange">
-        <span class="w3-button w3-display-topright w3-red" onclick="hideDialog()"><b>&times;</b></span>
-        <h4><span id="title"></span></h4>
-      </header>
-      <div class="w3-container w3-padding-24">
-        <h5><span id="message"></span></h5>
-      </div>
-    </div>
   </div>
 
 </body>

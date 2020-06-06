@@ -10,12 +10,20 @@
 </head>
 
 <body>
-
-<!-- main contents -->
+<!-- navigation -->
   <div class="w3-container w3-margin">
+
+    <div class="w3-bar w3-black">
+      <a href="#" class="w3-bar-item w3-button">Diaries</a>
+      <a href="#" class="w3-bar-item w3-button">City Ranks</a>
+      <a href="#" class="w3-bar-item w3-button">My Page</a>
+      <a href="#" class="w3-bar-item w3-button">Log out</a>
+    </div>
+    
+<!-- main contents -->
     <header class="w3-container w3-dark-grey">
-      <h2>Sign Up</h2>
-      <p>Please fill in this form to be a member.</p>
+      <h2>My Page</h2>
+      <p>Update Your Profile</p>
     </header>
 
     <div class="w3-container">
@@ -26,10 +34,7 @@
       <label class="w3-label" for="id"><b>ID</b></label>
       <div class="w3-cell-row">
         <div class="w3-cell">
-          <input class="w3-input" type="text" placeholder="Enter id" id="id" >
-        </div>
-        <div class="w3-cell w3-padding">
-          <button class="w3-button" type="button" id="checker" onclick="checkID()">Check</button>
+          <input class="w3-input" type="text" placeholder="Enter id" id="id" disabled>
         </div>
       </div>
 
@@ -44,14 +49,20 @@
         </div>
       </div>
 
-      <label class="w3-label"><b>Birth Date</b></label>
-      <input class="w3-input" type="text" placeholder="YYYYMMDD" id="birthDate" required">
+ 
 
-      <div class="w3-container w3-padding"> </div>
-      <label class="w3-label"><b>Sex</b></label>
-      <div class="w3-container">
-        <input class="w3-radio" type="radio" name="sex" value="M" checked/> <label>Male</label>
-        <input class="w3-radio" type="radio" name="sex" value="F" /> <label>Female</label>
+      <div class="w3-cell-row">
+        <div class="w3-cell">
+          <label class="w3-label"><b>Birth Date</b></label>
+          <input class="w3-input" type="text" placeholder="YYYYMMDD" id="birthDate" disabled>
+        </div>
+        <div class="w3-cell w3-padding">
+          <label class="w3-label"><b>Sex</b></label>
+          <div class="w3-container">
+            <input class="w3-radio" type="radio" name="sex" value="M" checked disabled> <label>Male</label>
+            <input class="w3-radio" type="radio" name="sex" value="F" disabled> <label>Female</label>
+          </div>
+        </div>
       </div>
 
       <div class="w3-container w3-padding"> </div>
@@ -75,7 +86,7 @@
       </div>
 
       <div class="w3-half w3-padding-left">
-          <div id="selectedCities" class="w3-container w3-border w3-border w3-border-black" style="height:80px;max-height:100px">
+          <div id="selectedCities" class="w3-container w3-border w3-border-black" style="height:80px;max-height:100px">
             <span></span>
           </div>
       </div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/signup.js"></script>
+<head>
+	<title>Create New Diary</title>
+</head>
+<body>
+  <div class="w3-container w3-margin">
+    <header class="w3-container w3-dark-grey">
+      <h2>Create New Diary</h2>
+      <p>choose a city</p>
+    </header>
+	<div>
+         <p><select name="country">
+           <option value="">country</option>
+           <option value="South Korea">South Korea</option>
+           <option value="U.S.A">U.S.A</option>
+           <option value="Canada">Canada</option>
+        </select>
+     
+        <select name="city">
+          <option value="">city</option>
+          <option value="Seoul">Seoul</option>
+          <option value="Iksan">Iksan</option>
+          <option value="Canada">Canada</option>
+        </select></p>
+
+        <div class="w3-container w3-padding-16w3-animate-zoom">
+        	<button class="w3-button" type="button" onclick="history.back()">Cancel</button>
+        	<button class="w3-button w3-green" type="submit" onclick="creatediary()">Create</button>
+     	</div>
+      </div> 
+  </div>
+</body>
+</html>

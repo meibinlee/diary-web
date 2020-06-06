@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/diary.css">
+<script type=text/javascript src="js/reader.js"></script>
+
+<head>
+  <title> Bookchain Platform </title>
+</head>
+
+<body onload="getReader()">
+
+<!-- main contents -->
+  <div class="td-container td-margin">
+    <header class="td-container td-black">
+      <h2>Bookcase</h2>
+      <p><sapn id="name">&apos;s Books</span></p>
+    </header>
+    <div class="td-container td-right">
+      <button class="td-button " id="btTable" type="button" onclick="getReader(true)"><b>&#9776;</b></button>
+      <button class="td-button " id="btCard" type="button" onclick="getReader(false)" disabled><b>&#9946;</b></button>
+    </div>
+
+    <div id="contents" class="td-container td-padding">
+    </div>
+
+    <footer class="td-container td-light-grey">
+      <h6>Copyright 2020 by Sangmin. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+<!-- popup modal -->
+  <div id="dialog" class="td-modal">
+    <div class="td-modal-content">
+      <header class="td-container td-orange">
+        <span class="td-button td-display-topright td-red" onclick="hideDialog()"><b>&times;</b></span>
+        <h4><span id="title"></span></h4>
+      </header>
+      <div class="td-container td-padding-24">
+        <h5><span id="message"></span></h5>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/diary.css">
+<script type=text/javascript src="js/signup.js"></script>
+
+<head>
+  <title> Trip Diary </title>
+</head>
+
+<body>
+
+<!-- main contents -->
+  <div class="td-container td-margin">
+    <header class="td-container td-black">
+      <h2>Sign Up</h2>
+      <p>Please fill in this form to be a member.</p>
+    </header>
+
+    <div class="td-container">
+      <label class="td-label"><b>Name</b></label>
+      <input class="td-input" type="text" placeholder="Your Name" id="name" required">
+
+      <label class="td-label" for="email"><b>Email</b></label>
+      <div class="td-cell-row">
+        <div class="td-cell">
+          <input class="td-input" type="text" placeholder="Enter Email" id="email" >
+        </div>
+        <div class="td-cell td-padding">
+          <button class="td-button" type="button" id="checker" onclick="checkEmail()">Avaliable?</button>
+        </div>
+      </div>
+
+      <div class="td-cell-row">
+        <div class="td-cell">
+          <label class="td-label"><b>Password</b></label>
+          <input class="td-input" type="password" placeholder="Enter Password" id="password" required>
+        </div>
+        <div class="td-cell td-padding">
+          <label class="td-label"><b>Repeat Password</b></label>
+          <input class="td-input" type="password" placeholder="Repeat Password" id="repeatPassword" required>
+        </div>
+      </div>
+
+      <label class="td-label"><b>Birth Date</b></label>
+      <input class="td-input" type="text" placeholder="YYYYMMDD" id="birthDate" required">
+
+      <label class="td-label"><b>Phone</b></label>
+      <input class="td-input" type="text" placeholder="010-1234-5678" id="phone" required">
+      <div class="td-container td-padding-16">
+        <button class="td-button" type="button" onclick="history.back()">Cancel</button>
+        <button class="td-button" type="submit" onclick="signup()">Submit</button>
+      </div>
+    </div>
+
+    <footer class="td-container td-light-grey">
+      <h6>Copyright 2020 by Sangmin. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+  <!-- popup modal -->
+  <div id="dialog" class="td-modal">
+    <div class="td-modal-content td-animate-zoom">
+      <header class="td-container td-orange">
+        <span class="td-button td-display-topright td-red" onclick="hideDialog()"><b>&times;</b></span>
+        <h4><span id="title"></span></h4>
+      </header>
+      <div class="td-container td-padding-24">
+        <h5><span id="message"></span></h5>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
