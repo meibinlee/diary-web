@@ -1,0 +1,29 @@
+{
+	"result": 0, 
+	"error": "",
+	"user_id": "mei",
+	"user_pw": "11111",
+	"user_name": "meibin",
+	"birthdate": "1999-02-12",
+	"sex": "F",
+	"city": [
+		{
+			"city_id": 1,
+			"country_id": 1,
+			"city": "Seoul",
+			"country": "South Korea"
+		},
+		{
+			"city_id": 4,
+			"country_id": 3,
+			"city": "Vancouver",
+			"country": "Canada"
+		},
+		{
+			"city_id": 2,
+			"country_id": 6,
+			"city": "Los Angeles",
+			"country": "U.S.A"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"result": 0, 
+	"error": "",
+	"diary": [
+		{
+			"diary_id": 1,
+			"city_id": 1,
+			"title": "Seoul, South Korea",
+			"postings_photo": "img/diaryimg.png",
+			"postings_posting_time": "2020-02-12 22:30",
+			"posting_count": 5
+		},
+		{
+			"diary_id": 2,
+			"city_id": 2,
+			"title": "Iksan, South Korea",
+			"postings_photo": "img/diaryimg.png",
+			"postings_posting_time": "2020-02-15 23:31",
+			"posting_count": 6
+		},
+		{
+			"diary_id": 3,
+			"city_id": 3,
+			"title": "Busan, South Korea",
+			"postings_photo": "img/diaryimg.png",
+			"postings_posting_time": "2020-02-28 20:30",
+			"posting_count": 10
+		},
+		{
+			"diary_id": 4,
+			"city_id": 1,
+			"title": "Seoul, South Korea",
+			"postings_photo": "img/diaryimg.png",
+			"postings_posting_time": "2020-02-12 22:30",
+			"posting_count": 5
+		},
+		{
+			"diary_id": 5,
+			"city_id": 2,
+			"title": "Iksan, South Korea",
+			"postings_photo": "img/diaryimg.png",
+			"postings_posting_time": "2020-02-15 23:31",
+			"posting_count": 6
+		},
+		{
+			"diary_id": 6,
+			"city_id": 3,
+			"title": "Busan, South Korea",
+			"postings_photo": "img/diaryimg.png",
+			"postings_posting_time": "2020-02-28 20:30",
+			"posting_count": 10
+		}
+	]
+}

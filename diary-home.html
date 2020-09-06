@@ -3,13 +3,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
-<script type=text/javascript src="js/reader.js"></script>
+<script type=text/javascript src="js/diary-home.js"></script>
 
 <head>
   <title> Diary Home </title>
 </head>
 
-<body>
+<body onload="setItems()">
 <!-- navigation -->
   <div class="w3-container w3-margin">
 
@@ -21,80 +21,15 @@
     </div>
 
 <!-- main contents -->
-    <header class="w3-container w3-dark-grey">
+    <header class="w3-container w3-dark-grey" id="user_name">
       <h2>Diaries</h2>
     </header>
 
-    <div id="contents" class="w3-container w3-padding">
+    <div class="w3-container w3-padding-16">
+          <button class="w3-button w3-green" type="button" onclick="popupNewDiary()">Create New Diary</button>
+    </div>
 
-      <div class="w3-container w3-padding-16">
-        <button class="w3-button w3-green" type="button" onclick="document.getElementById('id01').style.display='block'">Create New Diary</button>
-      </div>
-
-      <div class="w3-cell-row w3-margin">
-        <div class="w3-cell">
-          <div class="w3-card" style="width:100%;min-width:150px;max-width:200px">
-            <img src="img/diaryimg.png" alt="book" style="width:100%;opacity:0.80">
-            <div class="w3-container">
-              <h5><b>Seoul,South Korea</b></h5>
-              <p>2020.05.01</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-cell">
-          <div class="w3-card" style="width:100%;min-width:150px;max-width:200px">
-            <img src="img/diaryimg.png" alt="book" style="width:100%;opacity:0.80">
-            <div class="w3-container">
-              <h5><b>Vancouver,Canada</b></h5>
-              <p>2020.04.29</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-cell">
-          <div class="w3-card" style="width:100%;min-width:150px;max-width:200px">
-            <img src="img/diaryimg.png" alt="book" style="width:100%;opacity:0.80">
-            <div class="w3-container">
-              <h5><b>Vancouver,Canada</b></h5>
-              <p>2020.04.29</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w3-cell-row w3-margin">
-        <div class="w3-cell">
-          <div class="w3-card" style="width:100%;min-width:150px;max-width:200px">
-            <img src="img/diaryimg.png" alt="book" style="width:100%;opacity:0.80">
-            <div class="w3-container">
-              <h5><b>Seoul,South Korea</b></h5>
-              <p>2020.05.01</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-cell">
-          <div class="w3-card" style="width:100%;min-width:150px;max-width:200px">
-            <img src="img/diaryimg.png" alt="book" style="width:100%;opacity:0.80">
-            <div class="w3-container">
-              <h5><b>Vancouver,Canada</b></h5>
-              <p>2020.04.29</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-cell">
-          <div class="w3-card" style="width:100%;min-width:150px;max-width:200px">
-            <img src="img/diaryimg.png" alt="book" style="width:100%;opacity:0.80">
-            <div class="w3-container">
-              <h5><b>Vancouver,Canada</b></h5>
-              <p>2020.04.29</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+    <div id="diary">
     </div>
 
     <div class="w3-center">
@@ -111,36 +46,28 @@
     <footer class="w3-container w3-light-grey">
       <h6>Copyright 2020 by Binisoli. All Rights Reserved.</h6>
     </footer>
+
+
   </div>
 
 <!-- popup modal -->
-  <div id="id01" class="w3-modal">
+  <div id="newDiary" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
       <header class="w3-container w3-dark-grey"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
+        <span onclick="hideNewDiary()" 
         class="w3-button w3-display-topright w3-black">&times;</span>
         <h2>Modal Header</h2>
       </header>
 
       <div class="w3-container w3-padding">
-        <select class="w3-select" name="country">
-          <option value="">country</option>
-          <option value="South Korea">South Korea</option>
-          <option value="U.S.A">U.S.A</option>
-          <option value="Canada">Canada</option>
-        </select>
-       
-        <select class="w3-select" name="city">
-          <option value="">city</option>
-          <option value="Seoul">Seoul</option>
-          <option value="Iksan">Iksan</option>
-          <option value="Canada">Canada</option>
-        </select>
-
+        <div id="countries">
+        </div>
+        <div id="cities">
+        </div>
       </div>
 
       <div class="w3-container w3-padding">
-        <button class="w3-button w3-green" type="submit" onclick="location.assign('city-diary.html')" >Create</button>
+        <button class="w3-button w3-green" type="submit" onclick="createNewDiary()" >Create</button>
       </div>
     </div> 
   </div>

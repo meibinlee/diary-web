@@ -9,7 +9,7 @@
   <title> Trip Diary </title>
 </head>
 
-<body>
+<body onload="setItems()">
 
 <!-- main contents -->
   <div class="w3-container w3-margin">
@@ -19,14 +19,14 @@
     </header>
     <div class="w3-container">
       <label class="w3-label"><b>ID</b></label>
-      <input class="w3-input" type="text" placeholder="Enter ID" id="id" required" >
+      <input class="w3-input" type="text" placeholder="Enter ID" id="user_id" required >
       <label class="w3-label"><b>Password</b></label>
-      <input class="w3-input" type="password" placeholder="Enter Password" id="password" >
+      <input class="w3-input" type="password" placeholder="Enter Password" id="user_pw" required >
       <label class="w3-label" >
-        <input class="w3-check w3-padding-16" type="checkbox" id="remember" onclick="setRemember(this)"> Remember me
+        <input class="w3-check w3-padding-16" type="checkbox" id="remember" > Remember me
       </label>
       <div class="w3-container w3-padding-16">
-        <button class="w3-button " type="submit">Login</button>
+        <button class="w3-button w3-green" type="submit" onclick="login()">Login</button>
       </div>
     </div>
     <div class="w3-container">

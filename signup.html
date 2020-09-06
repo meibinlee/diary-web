@@ -51,8 +51,8 @@
       <div class="w3-container w3-padding"> </div>
       <label class="w3-label"><b>Sex</b></label>
       <div class="w3-container">
-        <input class="w3-radio" type="radio" name="sex" value="M" checked/> <label>Male</label>
-        <input class="w3-radio" type="radio" name="sex" value="F" /> <label>Female</label>
+        <input id="male" class="w3-radio" type="radio" name="sex" value="M" checked/> <label>Male</label>
+        <input id="female" class="w3-radio" type="radio" name="sex" value="F" /> <label>Female</label>
       </div>
 
       <div class="w3-container w3-padding"> </div>
@@ -71,7 +71,7 @@
             <option value="">city</option>
             <option value="Seoul">Seoul</option>
             <option value="Iksan">Iksan</option>
-            <option value="Canada">Canada</option>
+            <option value="Busan">Busan</option>
           </select>
         </div>
 
@@ -88,7 +88,7 @@
 
       <div class="w3-container w3-padding-16">
         <button class="w3-button" type="button" onclick="history.back()">Cancel</button>
-        <button class="w3-button" type="submit" onclick="signup()">Submit</button>
+        <button class="w3-button w3-green" type="submit" onclick="signup()">Submit</button>
       </div>
     </div>
 
@@ -101,3 +101,4 @@
 
 </body>
 </html>
+

@@ -1,4 +1,5 @@
 const URL_USER = "../was/user";
+const URL_DIARIES = "data/signup-suc.json";
 const URL_SIGNUP = "../was/signup";
 const URL_NEXT = "login.html";
 
@@ -24,12 +25,11 @@ function checkEmail() {
 }
 
 function signup() {
-  var json = { name:"",  email:"", password:"", birthDate: "", phone: "" };
+  var json = { name:"",  id:"", password:"", birthDate: ""};
   json.name = document.getElementById("name").value;
-  json.email = document.getElementById("email").value;
+  json.id = document.getElementById("id").value;
   json.password = document.getElementById("password").value;
   json.birthDate = document.getElementById("birthDate").value;
-  json.phone = document.getElementById("phone").value;
 
   var repeatPassword = document.getElementById("repeatPassword").value;
   if(repeatPassword != json.password) {
@@ -67,3 +67,60 @@ function showDialog(title, message) {
 function hideDialog() {
   document.getElementById('dialog').style.display='none';
 }
+
+function getCountries() {
+  var http = new XMLHttpRequest();
+  http.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var json = JSON.parse(this.responseText);
+      if(json.result == SUCCESS) {
+        showCountries(json.body);
+      }
+      else {
+        alert("Service Error\n" + json.error);
+      }
+    }
+    else if (this.readyState == 4 && this.status != 200){
+      alert("Connection Error\n" + this.responseText);
+    }
+  };
+  http.open("GET", URL_CODE_COUNTRY, true);
+  http.setRequestHeader("Content-Type", "application/json");
+  http.send();
+}
+
+function getCities(country) {
+  var http = new XMLHttpRequest();
+  http.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var json = JSON.parse(this.responseText);
+      if(json.result == SUCCESS) {
+        showCities(json.body);
+      }
+      else {
+        alert("Service Error\n" + json.error);
+      }
+    }
+    else if (this.readyState == 4 && this.status != 200){
+      alert("Connection Error\n" + this.responseText);
+    }
+  };
+  http.open("GET", URL_CODE_CITY + "?country=" + country, true);
+  http.setRequestHeader("Content-Type", "application/json");
+  http.send();
+}
+
+function countryChanged() {
+  var e = document.getElementById("country");
+  var country = e.options[e.selectedIndex].value;
+  getCities(country);
+}
+
+function cityChanged(){
+  var e = document.getElementById("city");
+  myCity.city_id = e.options[e.selectedIndex].value;
+  myCity.city = e.options[e.selectedIndex].label;
+  console.log("city_id="+ myCity.city_id + ", city="+ myCity.city);
+}
+
+

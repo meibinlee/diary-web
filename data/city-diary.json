@@ -1,0 +1,24 @@
+{
+	"result": 0, 
+	"error": "",
+	"city": [
+		{
+			"diary_id": 1,
+			"photo": "img/postingimg.png",
+			"diaryment": "창경궁",
+			"posting_date": "2020-02-01"
+		},
+		{
+			"diary_id": 1,
+			"photo": "img/postingimg.png",
+			"diaryment": "창덕궁",
+			"posting_date": "2020-02-10"
+		},
+		{
+			"diary_id": 1,
+			"photo": "img/postingimg.png",
+			"diaryment": "경복궁",
+			"posting_date": "2020-02-12"
+		}
+	]
+}
