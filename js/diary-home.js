@@ -218,3 +218,18 @@ function createNewDiary(){
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,32 +3,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
-<script type=text/javascript src="js/signup.js"></script>
+<script type=text/javascript src="js/mypage.js"></script>
 
 <head>
   <title> Trip Diary </title>
 </head>
 
-<body>
+<body onload="setItems()">
 <!-- navigation -->
   <div class="w3-container w3-margin">
 
-    <div class="w3-bar w3-black">
-      <a href="#" class="w3-bar-item w3-button">Diaries</a>
-      <a href="#" class="w3-bar-item w3-button">City Ranks</a>
-      <a href="#" class="w3-bar-item w3-button">My Page</a>
-      <a href="#" class="w3-bar-item w3-button">Log out</a>
+    <div class="w3-bar w3-light-blue">
+      <a href="diary-home.html" class="w3-bar-item w3-button">Diaries</a>
+      <a href="city-ranks.html" class="w3-bar-item w3-button">City Ranks</a>
+      <a href="#" class="w3-bar-item w3-button w3-dark-blue">My Page</a>
+      <a href="login.html" class="w3-bar-item w3-button">Log out</a>
     </div>
     
 <!-- main contents -->
-    <header class="w3-container w3-dark-grey">
+    <header class="w3-container w3-dark-blue">
       <h2>My Page</h2>
       <p>Update Your Profile</p>
     </header>
 
-    <div class="w3-container">
+    <div id="mypage" class="w3-container">
       <label class="w3-label"><b>Name</b></label>
-      <input class="w3-input" type="text" placeholder="Your Name" id="name" required">
+      <input class="w3-input" type="text" placeholder="Your Name" id="name" required>
 
       <div class="w3-container w3-padding"> </div>
       <label class="w3-label" for="id"><b>ID</b></label>
@@ -57,8 +57,8 @@
         <div class="w3-cell w3-padding">
           <label class="w3-label"><b>Sex</b></label>
           <div class="w3-container">
-            <input class="w3-radio" type="radio" name="sex" value="M" checked disabled> <label>Male</label>
-            <input class="w3-radio" type="radio" name="sex" value="F" disabled> <label>Female</label>
+            <input class="w3-radio" type="radio" name="sex" value="M" id="male"> <label>Male</label>
+            <input class="w3-radio" type="radio" name="sex" value="F" id="female"> <label>Female</label>
           </div>
         </div>
       </div>
@@ -67,20 +67,10 @@
 
       <label class="w3-label"><b>Select your favorite cities</b></label>
       <div class="w3-cell-row">
+        
         <div class="w3-half">
-          <select class="w3-select" name="country">
-            <option value="">country</option>
-            <option value="South Korea">South Korea</option>
-            <option value="U.S.A">U.S.A</option>
-            <option value="Canada">Canada</option>
-          </select>
-
-          <select class="w3-select" name="city">
-            <option value="">city</option>
-            <option value="Seoul">Seoul</option>
-            <option value="Iksan">Iksan</option>
-            <option value="Canada">Canada</option>
-          </select>
+          <div id="countries"></div>
+          <div id="cities"></div>
         </div>
 
         <div class="w3-half w3-padding-left">
@@ -96,7 +86,7 @@
 
       <div class="w3-container w3-padding-16">
         <button class="w3-button" type="button" onclick="history.back()">Cancel</button>
-        <button class="w3-button" type="submit" onclick="signup()">Submit</button>
+        <button class="w3-button w3-dark-green" type="submit" onclick="profile()">Submit</button>
       </div>
     </div>
 

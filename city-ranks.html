@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/city-ranks.js"></script>
+
+<head>
+  <title> Trip Diary </title>
+</head>
+
+<body onload="setItems()">
+<!-- navigation -->
+  <div class="w3-container w3-margin">
+
+    <div class="w3-bar w3-light-blue">
+      <a href="diary-home.html" class="w3-bar-item w3-button">Diaries</a>
+      <a href="#" class="w3-bar-item w3-button w3-dark-blue">City Ranks</a>
+      <a href="mypage.html" class="w3-bar-item w3-button">My Page</a>
+      <a href="login.html" class="w3-bar-item w3-button">Log out</a>
+    </div>
+
+<!-- main contents -->
+    <header class="w3-container w3-dark-blue">
+      <h2>City Ranks</h2>
+      <style>
+        .ratio{padding-top:20px}
+        .ratio li{float:left;position:relative;width:100px;height:300px;margin-right:10px;list-style:none}
+        .ratio div{position:absolute;left:0;bottom:0;width:100%; repeat;font-size:0}
+        .ratio em{position:absolute;top:-20px;width:100%;font-size:12px;font-weight:bold;text-align:center}
+      </style>
+    </header>
+
+    <div class="w3-container w3-padding"> </div>
+<!-- Kibana Visuualize -->
+    <div  id="kibana" class="ratio w3-padding-16 w3-border w3-border-black">
+      <label class="w3-label"><b>&nbsp;&nbsp;&nbsp;&nbsp;Kibana Charts</b></label>
+      <iframe src="http://localhost:5601/goto/01e2fb502031b4a9c02a15f04e537d1c" style="display:block; width:94vw; height: 135vh" scrolling="no" frameborder="0"></iframe>
+    </div> 
+
+    <div class="w3-container w3-padding"> </div>
+
+    <div class="w3-container w3-padding-16 w3-border w3-border-black">
+      <label class="w3-label"><b>Popular Cities For Every User</b></label>
+
+    <div id="ranks_all" class="ratio w3-padding-16">
+    </div>
+    </div>
+
+    <div class="w3-container w3-padding"> </div>
+    <div class="w3-container w3-padding-16 w3-border w3-border-black">    
+      <label class="w3-label"><b>Popular Cities Depends On Age Group</b></label>
+
+    <div id="ranks_age" class="ratio w3-padding-16">
+    </div>
+    </div>
+
+    <div class="w3-container w3-padding"> </div>  
+    <div class="w3-cell-row">   
+      <div class="w3-container w3-padding-16 w3-border w3-border-black w3-half">
+        <label class="w3-label"><b>Top 3 Cities For Female</b></label>
+
+      <div id="ranks_female" class="ratio w3-padding-16">
+      </div>    
+      </div>
+    
+      <div class="w3-container w3-padding-16 w3-border w3-border-black w3-half w3-padding-left">
+        <label class="w3-label"><b>Top 3 Cities For Male</b></label>
+
+      <div  id="ranks_male" class="ratio w3-padding-16">
+      </div>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding"> </div>  
+    <footer class="w3-container w3-light-grey">
+      <h6>Copyright 2020 by Binisoli. All Rights Reserved.</h6>
+    </footer>       
+  </div>
+</body>
+</html>

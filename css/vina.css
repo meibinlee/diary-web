@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #D3D3D3;
+}
+
+/* Header/Blog Title */
+.header {
+  color: #FFFFFF;
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: #2E8B57;
+}
+
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   height: auto;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #FFFFFF;
+  margin-top: 20px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  float: left;
+  width: 50%;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.submitbtn {
+  float: right;
+  width: 50%;
+}
+
+/*block button*/
+.block {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  background-color: #2E8B57;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/*block button hover*/
+.block:hover {
+  background-color: #D3D3D3;
+  color: black;
+}
+
+/*navigation*/
+.topnav {
+  overflow: hidden;
+  background-color: #65C28E;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #D3D3D3;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2E8B57;
+  color: white;
+}

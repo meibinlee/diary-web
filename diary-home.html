@@ -13,20 +13,20 @@
 <!-- navigation -->
   <div class="w3-container w3-margin">
 
-    <div class="w3-bar w3-black">
-      <a href="#" class="w3-bar-item w3-button">Diaries</a>
-      <a href="#" class="w3-bar-item w3-button">City Ranks</a>
-      <a href="#" class="w3-bar-item w3-button">My Page</a>
-      <a href="#" class="w3-bar-item w3-button">Log out</a>
+    <div class="w3-bar w3-light-blue">
+      <a href="#" class="w3-bar-item w3-button w3-dark-blue">Diaries</a>
+      <a href="city-ranks.html" class="w3-bar-item w3-button">City Ranks</a>
+      <a href="mypage.html" class="w3-bar-item w3-button">My Page</a>
+      <a href="login.html" class="w3-bar-item w3-button">Log out</a>
     </div>
 
 <!-- main contents -->
-    <header class="w3-container w3-dark-grey" id="user_name">
+    <header class="w3-container w3-dark-blue" id="user_name">
       <h2>Diaries</h2>
     </header>
 
     <div class="w3-container w3-padding-16">
-          <button class="w3-button w3-green" type="button" onclick="popupNewDiary()">Create New Diary</button>
+          <button class="w3-button w3-dark-green" type="button" onclick="popupNewDiary()">Create New Diary</button>
     </div>
 
     <div id="diary">
@@ -35,10 +35,10 @@
     <div class="w3-center">
       <div class="w3-bar ">
         <a href="#" class="w3-button">«</a>
-        <a href="#" class="w3-button w3-black">1</a>
-        <a href="#" class="w3-button">2</a>
-        <a href="#" class="w3-button">3</a>
-        <a href="#" class="w3-button">4</a>
+        <a href="#" id="p1" class="w3-button w3-dark-blue">1</a>
+        <a href="#" id="p2" class="w3-button">2</a>
+        <a href="#" id="p3" class="w3-button">3</a>
+        <a href="#" id="p4" class="w3-button">4</a>
         <a href="#" class="w3-button">»</a>
       </div>
     </div>
@@ -53,7 +53,7 @@
 <!-- popup modal -->
   <div id="newDiary" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-dark-grey"> 
+      <header class="w3-container w3-dark-blue"> 
         <span onclick="hideNewDiary()" 
         class="w3-button w3-display-topright w3-black">&times;</span>
         <h2>Modal Header</h2>
@@ -67,7 +67,7 @@
       </div>
 
       <div class="w3-container w3-padding">
-        <button class="w3-button w3-green" type="submit" onclick="createNewDiary()" >Create</button>
+        <button class="w3-button w3-dark-green" type="submit" onclick="createNewDiary()" >Create</button>
       </div>
     </div> 
   </div>

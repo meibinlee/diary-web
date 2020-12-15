@@ -9,11 +9,11 @@
   <title> Trip Diary </title>
 </head>
 
-<body>
+<body onload="setItems()">
 
 <!-- main contents -->
   <div class="w3-container w3-margin">
-    <header class="w3-container w3-dark-grey">
+    <header class="w3-container w3-dark-blue">
       <h2>Sign Up</h2>
       <p>Please fill in this form to be a member.</p>
     </header>
@@ -30,7 +30,7 @@
           <input class="w3-input" type="text" placeholder="Enter id" id="id" >
         </div>
         <div class="w3-cell w3-padding">
-          <button class="w3-button" type="button" id="checker" onclick="checkID()">Check</button>
+          <button class="w3-button w3-dark-blue" type="button" id="checker" onclick="checkId()">Check</button>
         </div>
       </div>
 
@@ -51,28 +51,18 @@
       <div class="w3-container w3-padding"> </div>
       <label class="w3-label"><b>Sex</b></label>
       <div class="w3-container">
-        <input id="male" class="w3-radio" type="radio" name="sex" value="M" checked/> <label>Male</label>
-        <input id="female" class="w3-radio" type="radio" name="sex" value="F" /> <label>Female</label>
+        <input class="w3-radio" type="radio" name="sex" value="M" checked/> <label>Male</label>
+        <input class="w3-radio" type="radio" name="sex" value="F" /> <label>Female</label>
       </div>
 
       <div class="w3-container w3-padding"> </div>
 
       <label class="w3-label"><b>Select your favorite cities</b></label>
       <div class="w3-cell-row">
+        
         <div class="w3-half">
-          <select class="w3-select" name="country">
-            <option value="">country</option>
-            <option value="South Korea">South Korea</option>
-            <option value="U.S.A">U.S.A</option>
-            <option value="Canada">Canada</option>
-          </select>
-
-          <select class="w3-select" name="city">
-            <option value="">city</option>
-            <option value="Seoul">Seoul</option>
-            <option value="Iksan">Iksan</option>
-            <option value="Busan">Busan</option>
-          </select>
+          <div id="countries"></div>
+          <div id="cities"></div>
         </div>
 
         <div class="w3-half w3-padding-left">
@@ -88,7 +78,7 @@
 
       <div class="w3-container w3-padding-16">
         <button class="w3-button" type="button" onclick="history.back()">Cancel</button>
-        <button class="w3-button w3-green" type="submit" onclick="signup()">Submit</button>
+        <button class="w3-button w3-dark-green" type="submit" onclick="signup()">Submit</button>
       </div>
     </div>
 
